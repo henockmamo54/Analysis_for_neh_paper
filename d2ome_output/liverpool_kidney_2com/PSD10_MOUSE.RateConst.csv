@@ -1,0 +1,11 @@
+Peptides, PeptideUnique, RateConstants, Correlations, RootMeanRSS, AbsoluteIsotopeError, Charge, m/z(Sequence), NEH, Abundance, NDP, Rsquared,sigma,CI lower band, CI upper band
+DHYDATAMHR, Yes, 0.24825, 0.998384, 0.007877, 0.099925,  3,   406.17697,  22, 3290026.000000, 9.000000, 0.994648, 0.007929, 0.229961, 0.266530
+DHYDATAMHR, Yes, 0.08716, 0.916020, 0.041724, 0.124474,  2,   608.76182,  22, 444929.968750, 9.000000, 0.543548, 0.023456, 0.033075, 0.141252
+
+
+MeanRateConst/CorrCutOff, 0.167705, 0.900000
+
+
+MedianRateConst/RMSSCutOff, 0.248246, 0.050000
+StandDev/NumberPeptides, 0.010037, 2
+TotalIonCurrent, 1.05083e+08
