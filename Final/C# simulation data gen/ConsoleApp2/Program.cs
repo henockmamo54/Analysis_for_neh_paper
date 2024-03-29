@@ -86,9 +86,10 @@ namespace ConsoleApp2
             var data = neh_obj.read_data_withRIA(filepath);
             neh_obj.updateNEHValues(data);
             neh_obj.updateRIAVals_with_pxt_error(data);
-            //neh_obj.updateRIAVals_with_datapoint_noise(data);
+            ////neh_obj.updateRIAVals_with_datapoint_noise(data);
             neh_obj.compute_two_parm_rate_and_gof_neh(data);
-            data = data.Where(x => x.two_param_rmse < 0.01 & x.two_param_rsquared > 0.97 & x.exp_times.Contains(31)).ToList();
+            //data = data.Where(x => x.two_param_rmse < 0.01 & x.two_param_rsquared > 0.97 & x.exp_times.Contains(31)).ToList();
+            data = data.Where(x => x.two_param_rmse < 0.1 & x.two_param_rsquared > 0.97 & x.exp_times.Contains(31)).ToList();
             //data = data.Where(x => Math.Abs(x.RIAs.Last() - x.two_param_i0_asymp) / x.RIAs.Last() < 0.1).ToList();
             data = data.Where(x => x.two_param_rate < Math.Log(2) & x.two_param_rate > Math.Log(2) / 31).ToList();
             //data = data.Where(x => neh_obj.check_monotonically_decreasing_sequence(x.RIAs)).ToList();

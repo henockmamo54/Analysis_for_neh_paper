@@ -649,7 +649,7 @@ namespace ConsoleApp2
         }
 
 
-        public void updateRIAVals_with_pxt_error(List<DataRecord> data)
+        public void updateRIAVals_with_pxt_error_original(List<DataRecord> data)
         {
             double ph = 1.5574E-4;
             foreach (var record in data)
@@ -661,6 +661,35 @@ namespace ConsoleApp2
                         var new_pxt = (1 - ph) * (1 - Math.Pow(record.RIAs[index] / record.M0, 1.0 / record.NEH));
 
                         float newr_ria = (float)(record.M0 * Math.Pow(1 - (new_pxt / (1 - ph)), record.NEH_sim));
+
+                        record.RIAs[index] = newr_ria;
+                        record.pxt = (float)new_pxt;
+                        //if (index == 11)
+                        //    Console.WriteLine(record.exp_times[index] + "," + new_pxt);
+                    }
+                }
+            }
+
+        }
+
+        public void updateRIAVals_with_pxt_error(List<DataRecord> data)
+        {
+            Random rand = new Random();
+            double ph = 1.5574E-4;
+            foreach (var record in data)
+            {
+                var rand_k = rand.NextDouble() * (Math.Log(2) - Math.Log(2) / 31) + Math.Log(2) / 31;
+                for (int index = 0; index < record.RIAs.Count(); index++)
+                {
+                    //if (record.RIAs[index] != 0)
+                    {
+                        var io_asymp_t = record.M0 * Math.Pow((1 - (0.046 / (1 - ph))), record.NEH);
+                        var theo_ria_t = io_asymp_t + (record.M0 - io_asymp_t) * Math.Exp(-rand_k * record.exp_times[index]);
+                        //var new_pxt = (1 - ph) * (1 - Math.Pow(record.RIAs[index] / record.M0, 1.0 / record.NEH));
+                        var new_pxt = (1 - ph) * (1 - Math.Pow(theo_ria_t / record.M0, 1.0 / record.NEH));
+
+                        //float newr_ria = (float)(record.M0 * Math.Pow(1 - (new_pxt / (1 - ph)), record.NEH_sim));
+                        float newr_ria = (float)(record.I0 * Math.Pow(1 - (new_pxt / (1 - ph)), record.NEH_sim));
 
                         record.RIAs[index] = newr_ria;
                         record.pxt = (float)new_pxt;
