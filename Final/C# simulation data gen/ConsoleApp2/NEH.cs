@@ -405,7 +405,7 @@ namespace ConsoleApp2
         }
 
 
-        public List<DataRecord> getExperimentalData_fromExperimetntalI0_asymp(float pw, List<DataRecord> data)
+        public List<DataRecord> getExperimentalData_fromExperimetntalI0_asymp_original(float pw, List<DataRecord> data)
         {
             var res = new List<DataRecord>();
 
@@ -415,12 +415,12 @@ namespace ConsoleApp2
                 #region compute theoretical isotopomer distribution 
                 float[] _fNatIsotopes2 = new float[6];
                 float[] _fLabIsotopes2 = new float[6];
-                _fNatIsotopes2[0] = data[index].M0;
-                _fNatIsotopes2[1] = data[index].M1;
-                _fNatIsotopes2[2] = data[index].M2;
-                _fNatIsotopes2[3] = data[index].M3;
-                _fNatIsotopes2[4] = data[index].M4;
-                _fNatIsotopes2[5] = data[index].M5;
+                _fNatIsotopes2[0] = data[index].I0;
+                _fNatIsotopes2[1] = data[index].I1;
+                _fNatIsotopes2[2] = data[index].I2;
+                _fNatIsotopes2[3] = data[index].I3;
+                _fNatIsotopes2[4] = data[index].I4;
+                _fNatIsotopes2[5] = data[index].I5;
                 _fNatIsotopes2 = normalize_list(_fNatIsotopes2.Select(x => (double)(x)).ToList()).Select(x => (float)(x)).ToArray();
                 MassIsotopomers _MIDyn = new MassIsotopomers();
                 _MIDyn.CalculateMIDynamics(_fNatIsotopes2, _fLabIsotopes2, pw, (float)(data[index].NEH));//(int)Math.Round
@@ -443,7 +443,7 @@ namespace ConsoleApp2
                 // get error at the asymp.
                 var errors = new List<double>();
                 for (int i = 0; i < 6; i++)
-                    errors.Add((_fLabIsotopes2[i] - current_Exp_isotope_distribution[i]) *0.25);//* 1E-6
+                    errors.Add((_fLabIsotopes2[i] - current_Exp_isotope_distribution[i]) * 0.70);//* 1E-6
 
 
                 #region recompute theoretical isotopomer distribution with sim. NEH and add noise
@@ -467,6 +467,53 @@ namespace ConsoleApp2
                 new_fLabIsotopes2 = normalize_list(new_fLabIsotopes2);
 
                 data[index].setExperimentalValues(new_fLabIsotopes2.Select(x => (float)x).ToArray());
+                data[index].pxt = pw;
+                #endregion
+                res.Add(data[index]);
+            }
+
+
+            return res;
+
+
+        }
+
+        public List<DataRecord> getExperimentalData_fromExperimetntalI0_asymp(float pw, List<DataRecord> data)
+        {
+            var res = new List<DataRecord>();
+
+            for (int index = 0; index < data.Count; index++)
+            {
+
+                // experimental value at asymptote
+                //var peptide = data[index];
+
+
+                var rmse_res = RMSE(
+                    normalize_list(new List<double> { data[index].M0, data[index].M1, data[index].M2, data[index].M3, data[index].M4, data[index].M5 }),
+                    normalize_list(new List<double> { data[index].I0, data[index].I1, data[index].I2, data[index].I3, data[index].I4, data[index].I5 })
+                    );
+                //Console.WriteLine(rmse_res);
+                if (rmse_res > 0.1) continue;
+
+
+                #region recompute theoretical isotopomer distribution with sim. NEH and add noise
+
+                float[] _fNatIsotopes2 = new float[6];
+                float[] _fLabIsotopes2 = new float[6];
+                _fNatIsotopes2[0] = data[index].I0;
+                _fNatIsotopes2[1] = data[index].I1;
+                _fNatIsotopes2[2] = data[index].I2;
+                _fNatIsotopes2[3] = data[index].I3;
+                _fNatIsotopes2[4] = data[index].I4;
+                _fNatIsotopes2[5] = data[index].I5;
+                _fNatIsotopes2 = normalize_list(_fNatIsotopes2.Select(x => (double)(x)).ToList()).Select(x => (float)(x)).ToArray();
+                var _MIDyn = new MassIsotopomers();
+                _MIDyn.CalculateMIDynamics(_fNatIsotopes2, _fLabIsotopes2, pw, (float)(data[index].NEH_sim));//(int)Math.Round
+                _fLabIsotopes2 = normalize_list(_fLabIsotopes2.Select(x => (double)(x)).ToList()).Select(x => (float)(x)).ToArray();
+
+
+                data[index].setExperimentalValues(_fLabIsotopes2.Select(x => (float)x).ToArray());
                 data[index].pxt = pw;
                 #endregion
                 res.Add(data[index]);
@@ -713,7 +760,7 @@ namespace ConsoleApp2
 
         public void getNEHvalues(List<PeptidesPassedNEHfilters> passedPeptides, string Method, List<AAsInfo> allAAs_info)
         {
-            float rmse_th = (float)0.01;
+            float rmse_th = float.PositiveInfinity;// (float)0.01;
             //float rmse_th = float.MaxValue; //(float)numericUpDown_neh_min_specRMSE.Value; float rmse_th = (float)numericUpDown_neh_min_specRMSE.Value;
             List<PeptidesPassedNEHfilters> items = new List<PeptidesPassedNEHfilters>();
             List<double> neh_dif;

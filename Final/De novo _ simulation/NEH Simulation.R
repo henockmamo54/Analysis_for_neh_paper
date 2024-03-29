@@ -109,20 +109,64 @@ print(c("px(t)", vals[1], "NEH", vals[2]))
 # simulation for multiple pep tides
 #===============================================
 
-data=read.csv("C:\\Workplace\\C++\\d2ome_restructure\\d2ome_restructure\\d2ome_GUI\\d2ome_GUI\\v2\\bin\\Debug\\Estimated_neh_numbers_utmb-liver_.csv")
+data=read.csv("Estimated_neh_numbers_liverpool_liver_.csv")
 
-pxt=c(rep(-1, dim(data)[1] ))
-neh=c(rep(-1, dim(data)[1] ))
+pxt_exp=c(rep(-1, dim(data)[1] ))
+neh_exp=c(rep(-1, dim(data)[1] ))
+pxt_theo=c(rep(-1, dim(data)[1] ))
+neh_theo=c(rep(-1, dim(data)[1] ))
 
 for (i in seq(1,(dim(data)[1]))){
   
-  vals=Compute_neh_pxt(data$i0_0[i],data$i1_0[i],data$i2_0[i],
+  vals_exp=Compute_neh_pxt(data$i0_0[i],data$i1_0[i],data$i2_0[i],
                        data$i0_31[i],data$i1_31[i],data$i2_31[i]); # computes the px(t) value and 
-  #the corresponding NEH value
   
-  print(c("px(t)",vals[1],"NEH",vals[2]))
-  pxt[i]=vals[1];
-  neh[i]=vals[2]
+  vals_theo= Compute_neh_pxt(data$i0_0[i],data$i1_0[i],data$i2_0[i],
+                             I0_t(data$i0_0[i], 0.046, data$T_NEH[i]),
+                             I1_t(data$i0_0[i],data$i1_0[i], data$T_NEH[i], 0.046),
+                             I2_t(data$i0_0[i],data$i1_0[i],data$i2_0[i], 0.046, data$T_NEH[i])
+                             )
+  
+  # print(c("px(t)",vals[1],"NEH",vals[2]))
+  pxt_theo[i]=vals_theo[1];
+  neh_theo[i]=vals_theo[2]
+  
+  pxt_exp[i]=vals_exp[1];
+  neh_exp[i]=vals_exp[2]
   
 }
+
+df=data.frame(data$T_NEH,c(rep(0.046,dim(data)[1])),pxt_theo,neh_theo,pxt_exp,neh_exp)
+colnames(df)=c('T_NEH','T_PXT','PXT_THEO','NEH_THEO','PXT_EXP','NEH_EXP')
+
+
+# plot the comparison results
+
+library(ggplot2)
+library(gridExtra)
+
+neh_1 <- ggplot(df, aes(x = T_NEH, y = NEH_THEO)) +
+  geom_point(size=2) + theme_bw() + ylab(" NEH \n(from theoretical values)")+
+  xlab("NEH (True)")
+
+neh_2 <- ggplot(df, aes(x = T_NEH, y = NEH_EXP)) +
+  geom_point(size=2) + theme_bw() + ylab(" NEH \n(from theoretical values)")+
+  xlab("NEH (True)")
+
+pxt_1 <- ggplot(df, aes(x = T_PXT, y = PXT_THEO)) +
+  geom_point(size=2) + theme_bw() + ylab(" BWE \n(from theoretical values)")+
+  xlab("BWE (True)")
+
+pxt_2 <- ggplot(df, aes(x = T_PXT, y = PXT_EXP)) +
+  geom_point(size=2) + theme_bw() + ylab(" BWE \n(from theoretical values)")+
+  xlab("BWE (True)")
+  
+
+# plot_grid(neh_1, neh_2,pxt_1,pxt_2, labels = "AUTO")
+gridExtra::grid.arrange(neh_1, neh_2,pxt_1,pxt_2)
+
+
+
+
+
 
