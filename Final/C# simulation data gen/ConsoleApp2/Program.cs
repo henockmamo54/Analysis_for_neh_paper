@@ -154,15 +154,15 @@ namespace ConsoleApp2
             //ProtRate.ReadFileFolder();
 
 
-            //DMSO
-            var CurrentFolder = @"C:\Users\hmdebern.UTMB-USERS-M\Desktop\_abigail\d2ome_output_4_2_24\DMSO\test2\\";
-            ProteinRateConstant ProtRate = new ProteinRateConstant(
-                CurrentFolder,
-                new float[] { 0, 0, 0, (float)(4 / 24.0), (float)4 / 24, (float)8 / 24, (float)8 / 24, 1, 1, 2, 2, 3 },
-                new float[] { (float)0.04, (float)0.04, (float)0.04, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-                1, new List<float> { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-                (float)1.0, false, 0);
-            ProtRate.ReadFileFolder();
+            ////DMSO
+            //var CurrentFolder = @"C:\Users\hmdebern.UTMB-USERS-M\Desktop\_abigail\d2ome_output_4_2_24\DMSO\test2\\";
+            //ProteinRateConstant ProtRate = new ProteinRateConstant(
+            //    CurrentFolder,
+            //    new float[] { 0, 0, 0, (float)(4 / 24.0), (float)4 / 24, (float)8 / 24, (float)8 / 24, 1, 1, 2, 2, 3 },
+            //    new float[] { (float)0.04, (float)0.04, (float)0.04, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+            //    1, new List<float> { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
+            //    (float)1.0, false, 0);
+            //ProtRate.ReadFileFolder();
 
             ////LEN
             //var CurrentFolder = @"C:\Users\hmdebern.UTMB-USERS-M\Desktop\_abigail\d2ome_output_4_2_24\LEN\test\\";
@@ -172,7 +172,7 @@ namespace ConsoleApp2
             //    new float[] { (float)0.04, (float)0.04, (float)0.04, 0, 0, 0, 0, 0, 0, 0 },
             //    1, new List<float> { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, },
             //    (float)1.0, false, 0);
-            ProtRate.ReadFileFolder();
+            //ProtRate.ReadFileFolder();
 
 
 
@@ -191,6 +191,20 @@ namespace ConsoleApp2
             //    dTimeconversion, f_useTwo_mass_isotopomers, nPeptideConsistency);
 
             //ProtRate->ReadFileFolder();
+
+
+            
+            var CurrentFolder = @"C:\Workplace\executables_test\d2ome_4_1_2024\test_output\test\liverpool_liver\\";
+            ProteinRateConstant ProtRate = new ProteinRateConstant(
+                CurrentFolder,
+                new float[] { 0, 1, 2, 3, 6, 7, 9, 13, 16, 21, 24, 31 },
+                new float[] {(float)0,(float)0.03855948,(float)0.04479649,(float)0.04580533,(float)0.04599918,(float)0.04599987,
+                    (float)0.046,(float)0.046,(float)0.046,(float)0.046,(float)0.046,(float)0.046},
+                1, new List<float> { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
+                (float)1.0, false, 0);
+            ProtRate.ReadFileFolder();
+
+
 
             #endregion
         }

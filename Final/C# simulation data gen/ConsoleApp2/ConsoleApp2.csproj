@@ -64,9 +64,9 @@
     <Reference Include="NNLS">
       <HintPath>..\..\..\..\C++\d2ome_restructure\d2ome_restructure\d2ome_GUI\d2ome_GUI\v2\bin\Debug\NNLS.dll</HintPath>
     </Reference>
-    <Reference Include="RateConstant, Version=1.0.8843.15604, Culture=neutral, processorArchitecture=AMD64">
+    <Reference Include="RateConstant, Version=1.0.8864.23671, Culture=neutral, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\C++\d2ome_restructure\d2ome_restructure\d2ome_GUI\d2ome_GUI\v2\bin\Debug\RateConstant.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\C++\temp_sol_dev\test\d2ome_restructure\d2ome_GUI\d2ome_GUI\v2\bin\Debug\RateConstant.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
