@@ -194,15 +194,15 @@ namespace ConsoleApp2
 
 
             
-            var CurrentFolder = @"C:\Workplace\executables_test\d2ome_4_1_2024\test_output\test\liverpool_liver\\";
-            ProteinRateConstant ProtRate = new ProteinRateConstant(
-                CurrentFolder,
-                new float[] { 0, 1, 2, 3, 6, 7, 9, 13, 16, 21, 24, 31 },
-                new float[] {(float)0,(float)0.03855948,(float)0.04479649,(float)0.04580533,(float)0.04599918,(float)0.04599987,
-                    (float)0.046,(float)0.046,(float)0.046,(float)0.046,(float)0.046,(float)0.046},
-                1, new List<float> { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-                (float)1.0, false, 0);
-            ProtRate.ReadFileFolder();
+            //var CurrentFolder = @"C:\Workplace\executables_test\d2ome_4_1_2024\test_output\test\liverpool_liver\\";
+            //ProteinRateConstant ProtRate = new ProteinRateConstant(
+            //    CurrentFolder,
+            //    new float[] { 0, 1, 2, 3, 6, 7, 9, 13, 16, 21, 24, 31 },
+            //    new float[] {(float)0,(float)0.03855948,(float)0.04479649,(float)0.04580533,(float)0.04599918,(float)0.04599987,
+            //        (float)0.046,(float)0.046,(float)0.046,(float)0.046,(float)0.046,(float)0.046},
+            //    1, new List<float> { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
+            //    (float)1.0, false, 0);
+            //ProtRate.ReadFileFolder();
 
 
 

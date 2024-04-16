@@ -1,0 +1,10 @@
+Peptides, PeptideUnique, RateConstants, Correlations, RootMeanRSS, AbsoluteIsotopeError, Charge, m/z(Sequence), NEH, Abundance, NDP, Rsquared,sigma,CI lower band, CI upper band
+HLVSPEALDLLDK, Yes, 0.12732, 0.999870, 0.002606, 0.141626,  3,   483.93643,  23, 393099.406250, 4.000000, 0.997852, 0.006331, 0.107168, 0.147465
+
+
+MeanRateConst/CorrCutOff, 0.127316, 0.900000
+
+
+MedianRateConst/RMSSCutOff, 0.127316, 0.050000
+StandDev/NumberPeptides, 0.006331, 1
+TotalIonCurrent, 9.12719e+06

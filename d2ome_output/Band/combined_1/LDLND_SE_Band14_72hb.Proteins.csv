@@ -1,0 +1,9 @@
+Accession, Protein, ProtScore, ProtLength, Peptide, PepScore, Charge, Scan, RetTime,m/z(Sequence), ExpMass
+ALBU_MOUSE, Serum albumin OS=Mus musculus GN=Alb PE=1 SV=3,  178.1,      608,LGEYGFQNAILVR, 24.6,  2,   8628,    66.91,  1479.80, 1479.79403
+ , , , ,LGEYGFQNAILVR, 74.9,  2,   8684,    67.25,  1479.80, 1479.79499
+ , , , ,LGEYGFQNAILVR,103.4,  2,   8741,    67.60,  1479.80, 1479.79551
+ , , , ,LGEYGFQNAILVR, 57.8,  2,   8797,    67.94,  1479.80, 1479.79618
+GSTP1_MOUSE, Glutathione S-transferase P 1 OS=Mus musculus GN=Gstp1 PE=1 SV=2,   86.9,      210,PPYTIVYFPVR, 20.2,  2,   9068,    69.64,  1351.74, 1351.74042
+ , , , ,PPYTIVYFPVR, 57.8,  2,   9008,    69.26,  1351.74, 1351.74119
+ , , , ,FEDGDLTLYQSNAILR, 39.5,  2,   9039,    69.46,  1854.92, 1854.92328
+ , , , ,FEDGDLTLYQSNAILR, 32.4,  2,   9094,    69.80,  1854.92, 1854.92415

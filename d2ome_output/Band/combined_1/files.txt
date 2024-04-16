@@ -1,0 +1,12 @@
+0 \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band10\LDLnD_SE_Band10_0ha.mzML \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band10\LDLnD_SE_Band10_0ha.mzid 0
+3 \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band10\LDLND_SE_Band10_72ha.mzML \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band10\LDLND_SE_Band10_72ha.mzid 0.0302
+3 \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band10\LDLND_SE_Band10_72hb.mzML \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band10\LDLND_SE_Band10_72hb.mzid 0.0302
+7 \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band10\LDLND_SE_Band10_168ha.mzML \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band10\LDLND_SE_Band10_168ha.mzid 0.0338
+7 \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band10\LDLND_SE_Band10_168hb.mzML \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band10\LDLND_SE_Band10_168hb.mzid 0.0338
+11 \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band10\LDLND_SE_Band10_264ha.mzML \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band10\LDLND_SE_Band10_264ha.mzid 0.0335
+11 \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band10\LDLND_SE_Band10_264hb.mzML \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band10\LDLND_SE_Band10_264hb.mzid 0.0335
+15 \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band10\LDLND_SE_Band10_360ha.mzML \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band10\LDLND_SE_Band10_360ha.mzid 0.0332
+15 \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band10\LDLND_SE_Band10_360hb.mzML \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band10\LDLND_SE_Band10_360hb.mzid 0.0332
+21 \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band10\LDLND_SE_Band10_504ha.mzML \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band10\LDLND_SE_Band10_504ha.mzid 0.0335
+21 \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band10\LDLND_SE_Band10_504hb.mzML \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band10\LDLND_SE_Band10_504hb.mzid 0.0335
+
