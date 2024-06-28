@@ -1,0 +1,9 @@
+0 \\UT321319\Shared_Folder\BYU\0days_60k_fusion.Centroid.mzML \\UT321319\Shared_Folder\BYU\0days_60k_fusion.mzid 0
+0.375 \\UT321319\Shared_Folder\BYU\9hours_60k_fusion.Centroid.mzML \\UT321319\Shared_Folder\BYU\9hours_60k_fusion.mzid 0.05
+1 \\UT321319\Shared_Folder\BYU\1day_60k_fusion.Centroid.mzML \\UT321319\Shared_Folder\BYU\1day_60k_fusion.mzid 0.05
+2 \\UT321319\Shared_Folder\BYU\2days_60k_fusion.Centroid.mzML \\UT321319\Shared_Folder\BYU\2days_60k_fusion.mzid 0.05
+4 \\UT321319\Shared_Folder\BYU\4days_60k_fusion.Centroid.mzML \\UT321319\Shared_Folder\BYU\4days_60k_fusion.mzid 0.05
+8 \\UT321319\Shared_Folder\BYU\8days_60k_fusion.Centroid.mzML \\UT321319\Shared_Folder\BYU\8days_60k_fusion.mzid 0.05
+16 \\UT321319\Shared_Folder\BYU\16days_60k_fusion.Centroid.mzML \\UT321319\Shared_Folder\BYU\16days_60k_fusion.mzid 0.05
+32 \\UT321319\Shared_Folder\BYU\32days_60k_fusion.Centroid.mzML \\UT321319\Shared_Folder\BYU\32days_60k_fusion.mzid 0.05
+

@@ -1,0 +1,13 @@
+0 \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band04_01\LDLnD_SE_Band4_0ha.mzML \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band04_01\LDLnD_SE_Band4_0ha.mzid 0
+0 \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band04_01\LDLnD_SE_Band4_0hb.mzML \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band04_01\LDLnD_SE_Band4_0hb.mzid 0
+3 \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band04_01\LDLnD_SE_Band4_72ha.mzML \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band04_01\LDLnD_SE_Band4_72ha.mzid 0.0302
+3 \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band04_01\LDLnD_SE_Band4_72hb.mzML \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band04_01\LDLnD_SE_Band4_72hb.mzid 0.0302
+7 \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band04_01\LDLnD_SE_Band4_168ha.mzML \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band04_01\LDLnD_SE_Band4_168ha.mzid 0.0338
+7 \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band04_01\LDLnD_SE_Band4_168hb.mzML \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band04_01\LDLnD_SE_Band4_168hb.mzid 0.0338
+11 \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band04_01\LDLnD_SE_Band4_264ha.mzML \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band04_01\LDLnD_SE_Band4_264ha.mzid 0.0335
+11 \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band04_01\LDLnD_SE_Band4_264hb.mzML \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band04_01\LDLnD_SE_Band4_264hb.mzid 0.0335
+15 \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band04_01\LDLnD_SE_Band4_360ha.mzML \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band04_01\LDLnD_SE_Band4_360ha.mzid 0.0332
+15 \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band04_01\LDLnD_SE_Band4_360hb.mzML \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band04_01\LDLnD_SE_Band4_360hb.mzid 0.0332
+21 \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band04_01\LDLnD_SE_Band4_504ha.mzML \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band04_01\LDLnD_SE_Band4_504ha.mzid 0.0335
+21 \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band04_01\LDLnD_SE_Band4_504hb.mzML \\UT321319\Shared_Folder\LDLR\Normal_Diet\mzid_mzML\Band04_01\LDLnD_SE_Band4_504hb.mzid 0.0335
+

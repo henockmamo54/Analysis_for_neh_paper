@@ -532,6 +532,14 @@ namespace ConsoleApp2
             var sum_FirstArray = FirstArr.Sum();
             var n_FirsArr = new List<double>();
 
+            //check if there is negtaive value and move the value to postive regions
+            var min_value = FirstArr.Min();
+            if (min_value < 0)
+            {
+                for (int i = 0; i < FirstArr.Count; i++)
+                    FirstArr[i] += min_value;
+            }
+
             for (int i = 0; i < FirstArr.Count; i++)
             {
                 n_FirsArr.Add(FirstArr[i] / sum_FirstArray);
@@ -539,19 +547,19 @@ namespace ConsoleApp2
             return n_FirsArr;
         }
 
-        public void getExperimentalData(float pw, List<DataRecord> data)
+        public List<DataRecord> getExperimentalData(float pw, List<DataRecord> data)
         {
             for (int index = 0; index < data.Count; index++)
             {
                 #region compute theoretical isotopomer distribution 
                 float[] _fNatIsotopes2 = new float[6];
                 float[] _fLabIsotopes2 = new float[6];
-                _fNatIsotopes2[0] = data[index].M0;// / 100;
-                _fNatIsotopes2[1] = data[index].M1;// / 100;
-                _fNatIsotopes2[2] = data[index].M2;// / 100;
-                _fNatIsotopes2[3] = data[index].M3;// / 100;
-                _fNatIsotopes2[4] = data[index].M4;// / 100;
-                _fNatIsotopes2[5] = data[index].M5;// / 100;
+                _fNatIsotopes2[0] = data[index].M0 / (data[index].M0 + data[index].M1 + data[index].M2 + data[index].M3 + data[index].M4 + data[index].M5);// / 100;
+                _fNatIsotopes2[1] = data[index].M1 / (data[index].M0 + data[index].M1 + data[index].M2 + data[index].M3 + data[index].M4 + data[index].M5);// / 100;
+                _fNatIsotopes2[2] = data[index].M2 / (data[index].M0 + data[index].M1 + data[index].M2 + data[index].M3 + data[index].M4 + data[index].M5);// / 100;
+                _fNatIsotopes2[3] = data[index].M3 / (data[index].M0 + data[index].M1 + data[index].M2 + data[index].M3 + data[index].M4 + data[index].M5);// / 100;
+                _fNatIsotopes2[4] = data[index].M4 / (data[index].M0 + data[index].M1 + data[index].M2 + data[index].M3 + data[index].M4 + data[index].M5);// / 100;
+                _fNatIsotopes2[5] = data[index].M5 / (data[index].M0 + data[index].M1 + data[index].M2 + data[index].M3 + data[index].M4 + data[index].M5);// / 100;
 
                 MassIsotopomers _MIDyn = new MassIsotopomers();
 
@@ -567,7 +575,7 @@ namespace ConsoleApp2
 
             WriteCsvFile(pw.ToString().Replace('.', '_') + ".csv", data);
 
-
+            return data;
 
         }
 
@@ -1401,12 +1409,12 @@ namespace ConsoleApp2
 
         public void setExperimentalValues(float[] experimental_data)
         {
-            I0_exp_t = experimental_data[0];
-            I1_exp_t = experimental_data[1];
-            I2_exp_t = experimental_data[2];
-            I3_exp_t = experimental_data[3];
-            I4_exp_t = experimental_data[4];
-            I5_exp_t = experimental_data[5];
+            I0_exp_t = experimental_data[0] / (experimental_data[0] + experimental_data[1] + experimental_data[2] + experimental_data[3] + experimental_data[4] + experimental_data[5]);
+            I1_exp_t = experimental_data[1] / (experimental_data[0] + experimental_data[1] + experimental_data[2] + experimental_data[3] + experimental_data[4] + experimental_data[5]);
+            I2_exp_t = experimental_data[2] / (experimental_data[0] + experimental_data[1] + experimental_data[2] + experimental_data[3] + experimental_data[4] + experimental_data[5]);
+            I3_exp_t = experimental_data[3] / (experimental_data[0] + experimental_data[1] + experimental_data[2] + experimental_data[3] + experimental_data[4] + experimental_data[5]);
+            I4_exp_t = experimental_data[4] / (experimental_data[0] + experimental_data[1] + experimental_data[2] + experimental_data[3] + experimental_data[4] + experimental_data[5]);
+            I5_exp_t = experimental_data[5] / (experimental_data[0] + experimental_data[1] + experimental_data[2] + experimental_data[3] + experimental_data[4] + experimental_data[5]);
         }
     }
 
